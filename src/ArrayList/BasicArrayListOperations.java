@@ -2,7 +2,7 @@ package ArrayList;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.List;
+import java.util.Iterator;
 
 public class BasicArrayListOperations {
 
@@ -28,6 +28,13 @@ public class BasicArrayListOperations {
 	list2.add("sheela");
 	list2.add("mala");
 	list2.add("ravi");
+	
+	Iterator <String >itr =list2.iterator();
+	System.out.println("*****************");
+	while (itr.hasNext()) {
+		System.out.println(itr.next());
+	}
+	System.out.println("***********************");
 	System.out.println(list2);
 	//We are Making Collection As Read only if we want to add any element to it
 	//it will throw the exception as 
@@ -36,7 +43,7 @@ public class BasicArrayListOperations {
 //	list2.add("ram");
 	System.out.println(list2);
 	//in java 9
-	List<String > list3= new ArrayList();
+	ArrayList<String > list3= new ArrayList();
 	list3.add("shiva");
 	list3.add("raghav");
 	list3.add("keahsva");
@@ -47,6 +54,12 @@ public class BasicArrayListOperations {
 	//Sorting the list 3
 	Collections.sort(list3);
 	System.out.println(list3);
+	//Clonning of an Arraylist
+	ArrayList clonedlist= (ArrayList) list3.clone();
+	System.out.println(clonedlist);
+	
+	
+	
 	
 	
   
